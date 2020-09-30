@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Jekyloco&#39;blog</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2020-09-30T03:54:27.215Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>Jekyloco</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>boardtest</title>
+    <link href="http://example.com/2020/09/28/board-test/"/>
+    <id>http://example.com/2020/09/28/board-test/</id>
+    <published>2020-09-28T07:08:42.000Z</published>
+    <updated>2020-09-30T03:54:27.215Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="newpage"><a href="#newpage" class="headerlink" title="newpage"></a>newpage</h2><p>没事呢<br>没事<br>就吃<br>溜溜咩</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;newpage&quot;&gt;&lt;a href=&quot;#newpage&quot; class=&quot;headerlink&quot; title=&quot;newpage&quot;&gt;&lt;/a&gt;newpage&lt;/h2&gt;&lt;p&gt;没事呢&lt;br&gt;没事&lt;br&gt;就吃&lt;br&gt;溜溜咩&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="board" scheme="http://example.com/tags/board/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://example.com/2020/09/28/test-1/"/>
+    <id>http://example.com/2020/09/28/test-1/</id>
+    <published>2020-09-28T06:51:58.000Z</published>
+    <updated>2020-09-30T03:53:59.195Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="长恨歌"><a href="#长恨歌" class="headerlink" title="长恨歌"></a>长恨歌</h3><p>（唐）白居易<br>汉皇重色思倾国，御宇多年求不得。<br>杨家有女初长成，养在深闺人未识。<br>天生丽质难自弃，一朝选在君王侧。<br>回眸一笑百媚生，六宫粉黛无颜色。<br>春寒赐浴华清池，温泉水滑洗凝脂。<br>侍儿扶起娇无力，始是新承恩泽时。<br>云鬓花颜金步摇，芙蓉帐暖度春宵。<br>春宵苦短日高起，从此君王不早朝。<br>……<br>惟将旧物表深情，钿合金钗寄将去。<br>钗留一股合一扇，钗擘黄金合分钿。<br>但教心似金钿坚，天上人间会相见。<br>临别殷勤重寄词，词中有誓两心知。<br>七月七日长生殿，夜半无人私语时。<br>在天愿作比翼鸟，在地愿为连理枝。<br>天长地久有时尽，此恨绵绵无绝期。</p><p>that’s all</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;长恨歌&quot;&gt;&lt;a href=&quot;#长恨歌&quot; class=&quot;headerlink&quot; title=&quot;长恨歌&quot;&gt;&lt;/a&gt;长恨歌&lt;/h3&gt;&lt;p&gt;（唐）白居易&lt;br&gt;汉皇重色思倾国，御宇多年求不得。&lt;br&gt;杨家有女初长成，养在深闺人未识。&lt;br&gt;天生丽质难自弃，一朝选在君王侧。</summary>
+      
+    
+    
+    
+    
+    <category term="test" scheme="http://example.com/tags/test/"/>
+    
+  </entry>
+  
+</feed>
