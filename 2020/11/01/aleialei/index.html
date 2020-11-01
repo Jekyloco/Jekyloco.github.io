@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="icon" href="/images/huihui.ico">
-  <title>lasttest | Jekyloco'blog</title>
+  <title>对class的二次看法 | Jekyloco'blog</title>
   <meta name="author" content="Jekyloco" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -16,18 +16,18 @@
       <meta name="description" itemprop="description" content="" />
     
   
-  <meta name="description" content="最最最后的test 12345public class Main &amp;#123;    public static void main(String[] args)&amp;#123;        System.out.println(&quot;Welcome to java!!&quot;);    &amp;#125;&amp;#125;  语言test">
+  <meta name="description" content="剖析Employee类1234567891011class  Employee&amp;#123;    private final String name;    private double salary;    private final LocalDate hireDay;    public Employee(String n, double s, int year, int month, in">
 <meta property="og:type" content="article">
-<meta property="og:title" content="lasttest">
-<meta property="og:url" content="http://example.com/2020/11/01/newtest/index.html">
+<meta property="og:title" content="对class的二次看法">
+<meta property="og:url" content="http://example.com/2020/11/01/aleialei/index.html">
 <meta property="og:site_name" content="Jekyloco&#39;blog">
-<meta property="og:description" content="最最最后的test 12345public class Main &amp;#123;    public static void main(String[] args)&amp;#123;        System.out.println(&quot;Welcome to java!!&quot;);    &amp;#125;&amp;#125;  语言test">
+<meta property="og:description" content="剖析Employee类1234567891011class  Employee&amp;#123;    private final String name;    private double salary;    private final LocalDate hireDay;    public Employee(String n, double s, int year, int month, in">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/huihui.ico">
-<meta property="article:published_time" content="2020-11-01T10:16:14.000Z">
-<meta property="article:modified_time" content="2020-11-01T14:34:16.073Z">
+<meta property="article:published_time" content="2020-11-01T14:42:31.000Z">
+<meta property="article:modified_time" content="2020-11-01T14:54:56.102Z">
 <meta property="article:author" content="Jekyloco">
-<meta property="article:tag" content="日常">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/huihui.ico">
 <meta name="twitter:site" content="@null">
@@ -117,7 +117,7 @@
     <article>
         <div class="kratos-hentry kratos-post-inner clearfix">
             <header class="kratos-entry-header">
-                <h1 class="kratos-entry-title text-center">lasttest</h1>
+                <h1 class="kratos-entry-title text-center">对class的二次看法</h1>
                 
                 <div class="kratos-post-meta text-center">
                     <span>
@@ -129,11 +129,25 @@
             </header>
             <div class="kratos-post-content">
                 
+                    <div class="kratos-post-inner-toc">
+                        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%96%E6%9E%90Employee%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">剖析Employee类</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B%E5%9F%9F"><span class="toc-number">1.1.</span> <span class="toc-text">实例域</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%99%A8"><span class="toc-number">1.2.</span> <span class="toc-text">构造器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BB%A5%E5%8F%8A%E9%9A%90%E7%A7%81%E5%8F%82%E6%95%B0%E5%92%8C%E6%98%BE%E5%BC%8F%E5%8F%82%E6%95%B0"><span class="toc-number">1.3.</span> <span class="toc-text">方法以及隐私参数和显式参数</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#tips"><span class="toc-number">1.3.1.</span> <span class="toc-text">tips</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                
                 <hr />
-                <p>最最最后的test</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Welcome to java!!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+                <h4 id="剖析Employee类"><a href="#剖析Employee类" class="headerlink" title="剖析Employee类"></a>剖析Employee类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span>  <span class="title">Employee</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> salary;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> LocalDate hireDay;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String n, <span class="keyword">double</span> s, <span class="keyword">int</span> year, <span class="keyword">int</span> month, <span class="keyword">int</span> day)</span></span>&#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span>  String <span class="title">getName</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">double</span> <span class="title">getSalary</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> LocalDate <span class="title">getHireDay</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">raiseSalary</span><span class="params">(<span class="keyword">double</span> byPercent)</span></span>&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>语言test</p>
+<p>Employee类包含三个实例域，一个构造器以及4个方法。</p>
+<h5 id="实例域"><a href="#实例域" class="headerlink" title="实例域"></a>实例域</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> String name;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">double</span> salary;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> LocalDate hireDay;</span><br></pre></td></tr></table></figure>
+
+<h5 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h5><p>构造器与类同名，在构造 Employee 类的对象时， 构造器会运行，以便将<strong>实例域</strong>初始化为所希望的状态。(copy的)</p>
+<p>构造器总是伴随着new操作符一起使用。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String n, <span class="keyword">double</span> s, <span class="keyword">int</span> year, <span class="keyword">int</span> month, <span class="keyword">int</span> day)</span></span>&#123;</span><br><span class="line">        name = n;</span><br><span class="line">        salary = s;</span><br><span class="line">        hireDay = LocalDate.of(year,month,day);</span><br><span class="line">    &#125;</span><br><span class="line">Employee herry = <span class="keyword">new</span> Employee(<span class="string">&quot;herry&quot;</span>,<span class="number">60000</span>,<span class="number">1999</span>,<span class="number">10</span>,<span class="number">02</span>);<span class="comment">//新对象的建立与实例域的赋值。</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="方法以及隐私参数和显式参数"><a href="#方法以及隐私参数和显式参数" class="headerlink" title="方法以及隐私参数和显式参数"></a>方法以及隐私参数和显式参数</h5><p>方法用于操作对象以及存取他们的实例域</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">raiseSalary</span><span class="params">(<span class="keyword">double</span> byPercent)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">double</span> raise = salary * byPercent / <span class="number">100</span>;</span><br><span class="line">salary += raise;</span><br><span class="line">&#125;</span><br><span class="line">number007.raiseSalary(<span class="number">5</span>);</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">&lt;==&gt;double raise = number007.salary * 5 / 100;</span></span><br><span class="line"><span class="comment">	number007.salary += raise;</span></span><br><span class="line"><span class="comment">	调用这个方法&#123;raiseSalary()&#125;的对象(number007)的 salary 实例域(number007.salary)设置为新值</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p>raiseSalary方法有两个参数。隐私参数，即方法名前的类对象number007。显示参数，即括号中的数值5（byPercent）。</p>
+<h6 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h6><p>嚯，找了一会儿的东西，```java 可在Typora中速度打开Java代码块。</p>
 
             </div>
             
@@ -187,7 +201,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://example.com/2020/11/01/newtest/",
+                text: "http://example.com/2020/11/01/aleialei/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -199,10 +213,9 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://example.com/2020/11/01/newtest/";
-            const title         = "「lasttest」";
-            const excerpt       = `最最最后的test
-12345public class Main &#123;    public static void main(String[] args)&#123;        System.out.println(&qu...`;
+            const hostUrl       = "http://example.com/2020/11/01/aleialei/";
+            const title         = "「对class的二次看法」";
+            const excerpt       = `剖析Employee类1234567891011class  Employee&#123;    private final String name;    private double salary;    private fina...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -221,7 +234,7 @@
                 <div class="footer-tag clearfix">
                     <div class="pull-left">
                     <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a>
+                        <a class="tag-none-link" href="/tags/java/" rel="tag">java</a>
                     </div>
                     <div class="pull-date">
                     <span>最后编辑：2020-11-01</span>
@@ -232,9 +245,13 @@
         
             <nav class="navigation post-navigation clearfix" role="navigation">
                 
+                <div class="nav-previous clearfix">
+                    <a title=" lasttest" href="/2020/11/01/newtest/">&lt; 上一篇</a>
+                </div>
+                
                 
                 <div class="nav-next clearfix">
-                    <a title=" 对class的二次看法" href="/2020/11/01/aleialei/">下一篇 &gt;</a>
+                    <a title=" errortest" href="/2020/11/01/errortest/">下一篇 &gt;</a>
                 </div>
                 
             </nav>
@@ -256,7 +273,7 @@
     </div>
     <div class="textwidget">
         
-            <p class="text-center"></p>
+            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%96%E6%9E%90Employee%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">剖析Employee类</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B%E5%9F%9F"><span class="toc-number">1.1.</span> <span class="toc-text">实例域</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%99%A8"><span class="toc-number">1.2.</span> <span class="toc-text">构造器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BB%A5%E5%8F%8A%E9%9A%90%E7%A7%81%E5%8F%82%E6%95%B0%E5%92%8C%E6%98%BE%E5%BC%8F%E5%8F%82%E6%95%B0"><span class="toc-number">1.3.</span> <span class="toc-text">方法以及隐私参数和显式参数</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#tips"><span class="toc-number">1.3.1.</span> <span class="toc-text">tips</span></a></li></ol></li></ol></li></ol>
         
     </div>
 </aside>

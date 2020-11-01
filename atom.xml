@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-11-01T14:34:16.073Z</updated>
+  <updated>2020-11-01T14:56:14.169Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>errortest</title>
+    <link href="http://example.com/2020/11/01/errortest/"/>
+    <id>http://example.com/2020/11/01/errortest/</id>
+    <published>2020-11-01T14:55:16.000Z</published>
+    <updated>2020-11-01T14:56:14.169Z</updated>
+    
+    <content type="html"><![CDATA[<p>不知道为啥</p><p>有一点点的问题</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;不知道为啥&lt;/p&gt;
+&lt;p&gt;有一点点的问题&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="日常" scheme="http://example.com/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>对class的二次看法</title>
+    <link href="http://example.com/2020/11/01/aleialei/"/>
+    <id>http://example.com/2020/11/01/aleialei/</id>
+    <published>2020-11-01T14:42:31.000Z</published>
+    <updated>2020-11-01T14:54:56.102Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="剖析Employee类"><a href="#剖析Employee类" class="headerlink" title="剖析Employee类"></a>剖析Employee类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span>  <span class="title">Employee</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> salary;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> LocalDate hireDay;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String n, <span class="keyword">double</span> s, <span class="keyword">int</span> year, <span class="keyword">int</span> month, <span class="keyword">int</span> day)</span></span>&#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span>  String <span class="title">getName</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">double</span> <span class="title">getSalary</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> LocalDate <span class="title">getHireDay</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">raiseSalary</span><span class="params">(<span class="keyword">double</span> byPercent)</span></span>&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Employee类包含三个实例域，一个构造器以及4个方法。</p><h5 id="实例域"><a href="#实例域" class="headerlink" title="实例域"></a>实例域</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> String name;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">double</span> salary;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> LocalDate hireDay;</span><br></pre></td></tr></table></figure><h5 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h5><p>构造器与类同名，在构造 Employee 类的对象时， 构造器会运行，以便将<strong>实例域</strong>初始化为所希望的状态。(copy的)</p><p>构造器总是伴随着new操作符一起使用。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String n, <span class="keyword">double</span> s, <span class="keyword">int</span> year, <span class="keyword">int</span> month, <span class="keyword">int</span> day)</span></span>&#123;</span><br><span class="line">        name = n;</span><br><span class="line">        salary = s;</span><br><span class="line">        hireDay = LocalDate.of(year,month,day);</span><br><span class="line">    &#125;</span><br><span class="line">Employee herry = <span class="keyword">new</span> Employee(<span class="string">&quot;herry&quot;</span>,<span class="number">60000</span>,<span class="number">1999</span>,<span class="number">10</span>,<span class="number">02</span>);<span class="comment">//新对象的建立与实例域的赋值。</span></span><br></pre></td></tr></table></figure><h5 id="方法以及隐私参数和显式参数"><a href="#方法以及隐私参数和显式参数" class="headerlink" title="方法以及隐私参数和显式参数"></a>方法以及隐私参数和显式参数</h5><p>方法用于操作对象以及存取他们的实例域</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">raiseSalary</span><span class="params">(<span class="keyword">double</span> byPercent)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">double</span> raise = salary * byPercent / <span class="number">100</span>;</span><br><span class="line">salary += raise;</span><br><span class="line">&#125;</span><br><span class="line">number007.raiseSalary(<span class="number">5</span>);</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">&lt;==&gt;double raise = number007.salary * 5 / 100;</span></span><br><span class="line"><span class="comment">number007.salary += raise;</span></span><br><span class="line"><span class="comment">调用这个方法&#123;raiseSalary()&#125;的对象(number007)的 salary 实例域(number007.salary)设置为新值</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure><p>raiseSalary方法有两个参数。隐私参数，即方法名前的类对象number007。显示参数，即括号中的数值5（byPercent）。</p><h6 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h6><p>嚯，找了一会儿的东西，```java 可在Typora中速度打开Java代码块。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;剖析Employee类&quot;&gt;&lt;a href=&quot;#剖析Employee类&quot; class=&quot;headerlink&quot; title=&quot;剖析Employee类&quot;&gt;&lt;/a&gt;剖析Employee类&lt;/h4&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table</summary>
+      
+    
+    
+    
+    
+    <category term="java" scheme="http://example.com/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>lasttest</title>
