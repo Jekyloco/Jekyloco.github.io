@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-11-01T10:21:00.263Z</updated>
+  <updated>2020-11-01T14:34:16.073Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>newtest</title>
+    <title>lasttest</title>
     <link href="http://example.com/2020/11/01/newtest/"/>
     <id>http://example.com/2020/11/01/newtest/</id>
     <published>2020-11-01T10:16:14.000Z</published>
-    <updated>2020-11-01T10:21:00.263Z</updated>
+    <updated>2020-11-01T14:34:16.073Z</updated>
     
     <content type="html"><![CDATA[<p>最最最后的test</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Welcome to java!!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>语言test</p>]]></content>
     
@@ -35,29 +35,7 @@
     
     
     
-    <category term="the last test" scheme="http://example.com/tags/the-last-test/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://example.com/2020/09/28/test-1/"/>
-    <id>http://example.com/2020/09/28/test-1/</id>
-    <published>2020-09-28T06:51:58.000Z</published>
-    <updated>2020-09-30T03:53:59.195Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="长恨歌"><a href="#长恨歌" class="headerlink" title="长恨歌"></a>长恨歌</h3><p>（唐）白居易<br>汉皇重色思倾国，御宇多年求不得。<br>杨家有女初长成，养在深闺人未识。<br>天生丽质难自弃，一朝选在君王侧。<br>回眸一笑百媚生，六宫粉黛无颜色。<br>春寒赐浴华清池，温泉水滑洗凝脂。<br>侍儿扶起娇无力，始是新承恩泽时。<br>云鬓花颜金步摇，芙蓉帐暖度春宵。<br>春宵苦短日高起，从此君王不早朝。<br>……<br>惟将旧物表深情，钿合金钗寄将去。<br>钗留一股合一扇，钗擘黄金合分钿。<br>但教心似金钿坚，天上人间会相见。<br>临别殷勤重寄词，词中有誓两心知。<br>七月七日长生殿，夜半无人私语时。<br>在天愿作比翼鸟，在地愿为连理枝。<br>天长地久有时尽，此恨绵绵无绝期。</p><p>that’s all</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;长恨歌&quot;&gt;&lt;a href=&quot;#长恨歌&quot; class=&quot;headerlink&quot; title=&quot;长恨歌&quot;&gt;&lt;/a&gt;长恨歌&lt;/h3&gt;&lt;p&gt;（唐）白居易&lt;br&gt;汉皇重色思倾国，御宇多年求不得。&lt;br&gt;杨家有女初长成，养在深闺人未识。&lt;br&gt;天生丽质难自弃，一朝选在君王侧。</summary>
-      
-    
-    
-    
-    
-    <category term="test" scheme="http://example.com/tags/test/"/>
+    <category term="日常" scheme="http://example.com/tags/%E6%97%A5%E5%B8%B8/"/>
     
   </entry>
   
